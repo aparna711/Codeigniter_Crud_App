@@ -29,7 +29,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         Please check your database configuration or contact the administrator.
     </p>
     
-    <a href="<?php echo base_url('test/crudApp'); ?>">Try Registration Again</a>
+    <a href="<?php echo base_url('index.php/test/crudApp'); ?>">Try Registration Again</a>
 </div>
 
 </body>
