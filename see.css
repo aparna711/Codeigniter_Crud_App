@@ -1,0 +1,49 @@
+/* 1. Fix the Container */
+.container {
+    max-width: 100%; /* Changed from 14000px to 100% */
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    /* Remove overflow: hidden; as it can cut off shadows/scrollbars */
+    border: 1px solid #e2e8f0;
+}
+
+/* 2. Enhance the Table Wrapper (The "Secret Sauce" for scrolling) */
+.table-wrapper {
+    overflow-x: auto; /* Enables horizontal scroll */
+    overflow-y: visible; /* Allows page to grow vertically */
+    margin: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border: 1px solid #e5e7eb;
+    position: relative;
+    background: #ffffff;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+/* 3. Adjust the Table */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    min-width: 1500px; /* Forces the scrollbar if screen is narrower than this */
+    table-layout: auto; /* Allows columns to breathe based on content */
+}
+
+/* 4. Ensure Sticky Header works while scrolling */
+.data-table thead {
+    background: #1e293b;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* 5. Handle Filter Tags wrapping */
+.current-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 30px;
+    background: #f1f5f9;
+}

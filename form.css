@@ -1,0 +1,261 @@
+/* Register Modal Specific Styles */
+#registerModal .modal-content {
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: slideInUp 0.4s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Form Container */
+#customerRegistrationForm {
+    max-width: 100%;
+    margin: 0;
+}
+
+#customerRegistrationForm fieldset {
+    border: 2px solid #e8f4f8;
+    border-radius: 12px;
+    padding: 25px;
+    margin: 20px 0;
+    background: linear-gradient(145deg, #fafbfc, #f0f4f7);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    position: relative;
+}
+
+#customerRegistrationForm fieldset::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #3498db, #9b59b6, #27ae60);
+    border-radius: 12px 12px 0 0;
+}
+
+#customerRegistrationForm legend {
+    font-size: 18px;
+    font-weight: 700;
+    color: #2c3e50;
+    padding: 0 15px;
+    background: white;
+    border: 2px solid #e8f4f8;
+    border-radius: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Form Labels */
+#customerRegistrationForm label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #34495e;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+}
+
+/* Form Inputs */
+#customerRegistrationForm input[type="text"],
+#customerRegistrationForm input[type="email"],
+#customerRegistrationForm input[type="tel"],
+#customerRegistrationForm input[type="number"],
+#customerRegistrationForm input[type="date"],
+#customerRegistrationForm select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #e1e8ed;
+    border-radius: 10px;
+    font-size: 15px;
+    background: #fff;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+#customerRegistrationForm input:focus,
+#customerRegistrationForm select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+    transform: translateY(-1px);
+    background: #fafbfc;
+}
+
+/* Radio Button Groups */
+#customerRegistrationForm div[style*="display: inline-block"] {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+#customerRegistrationForm input[type="radio"] {
+    width: auto;
+    margin: 0 8px 0 0;
+    transform: scale(1.2);
+    accent-color: #3498db;
+}
+
+#customerRegistrationForm label[for^="status_"],
+#customerRegistrationForm label[for^="gender_"] {
+    font-weight: 500;
+    color: #2c3e50;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.2s;
+    display: inline-flex;
+    /*display: flex*/
+    align-items: center;
+    gap: 8px;
+}
+
+#customerRegistrationForm input[type="radio"]:checked + label[for^="status_"],
+#customerRegistrationForm input[type="radio"]:checked + label[for^="gender_"] {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+/* Checkbox Groups - Product Interests */
+#customerRegistrationForm fieldset:last-of-type div[style*="display: flex"] {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+#customerRegistrationForm input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+    transform: scale(1.3);
+    accent-color: #27ae60;
+}
+
+#customerRegistrationForm label[for^="interest_"] {
+    font-weight: 500;
+    color: #2c3e50;
+    cursor: pointer;
+    padding: 12px;
+    border: 2px solid #e1e8ed;
+    border-radius: 10px;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #fff;
+}
+
+#customerRegistrationForm input[type="checkbox"]:checked + label[for^="interest_"] {
+    border-color: #27ae60;
+    background: linear-gradient(135deg, #d4f1de, #a8e6cf);
+    box-shadow: 0 4px 12px rgba(39, 174, 96, 0.2);
+}
+
+/* Submit Button */
+#customerRegistrationForm button[type="submit"] {
+    width: 100%;
+    padding: 18px;
+    background: linear-gradient(135deg, #27ae60 0%, #219653 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(39, 174, 96, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+#customerRegistrationForm button[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(39, 174, 96, 0.4);
+}
+
+#customerRegistrationForm button[type="submit"]:active {
+    transform: translateY(-1px);
+}
+
+#customerRegistrationForm button[type="submit"]:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* HR Separators */
+#customerRegistrationForm hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #e1e8ed, transparent);
+    margin: 30px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #registerModal .modal-content {
+        width: 95%;
+        margin: 5% auto;
+        padding: 20px;
+    }
+    
+    #customerRegistrationForm fieldset {
+        padding: 20px;
+        margin: 15px 0;
+    }
+    
+    #customerRegistrationForm input[type="radio"] + label[for^="status_"],
+    #customerRegistrationForm input[type="radio"] + label[for^="gender_"] {
+        font-size: 14px;
+        padding: 10px;
+    }
+    
+    #customerRegistrationForm label[for^="interest_"] {
+        padding: 15px;
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 480px) {
+    #customerRegistrationForm legend {
+        font-size: 16px;
+    }
+    
+    #customerRegistrationForm input,
+    #customerRegistrationForm select {
+        padding: 12px 14px;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+}
+
+/* Loading State Animation */
+#customerRegistrationForm button[type="submit"] i.fa-spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Error States */
+#customerRegistrationForm input:invalid {
+    border-color: #e74c3c;
+    background: #fdf2f2;
+}
+
+#customerRegistrationForm input:invalid:focus {
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+}
